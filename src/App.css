@@ -1,0 +1,272 @@
+.hcj-container {
+    background-image: url('hcj/imb1.jpg');
+    background-position: center;
+    background-size: cover;
+    /* scales image */
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    /* at least full viewport height */
+    width: 100%;
+    /* full width */
+    font-family: sans-serif;
+
+}
+
+/* Menu Bar */
+
+/* === FORCE SINGLE-ROW NAV ON ALL SIZES === */
+.menu-bar {
+    width: 100%;
+    background-color: rgb(66, 68, 69);
+    overflow-x: auto;
+    /* swipe left/right on small screens */
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* hide scrollbar (webkit) */
+
+.menu-bar ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    /* never wrap to next line */
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar ul li {
+    flex: 0 0 auto !important;
+    /* don't stretch to full width */
+    margin: 0 8px;
+    padding: 13px 12px;
+    white-space: nowrap;
+    /* keep each item on one line */
+    /* make sure no old width=100% applies */
+    width: auto !important;
+    display: block;
+    /* li is a flex item; this is fine */
+}
+
+.menu-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.active,
+.menu-bar ul li:hover {
+    background-color: rgb(8, 121, 165);
+    border-radius: 3px;
+}
+
+/* Keep dropdown working; won't affect row layout */
+.sub-menu-1 {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background-color: rgb(66, 68, 69);
+    margin-left: -5px;
+    margin-top: 13px;
+    opacity: 0.95;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 90px;
+    padding: 3px;
+    text-align: left;
+    border-bottom: 1px dotted #fff;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: white;
+}
+
+
+/* logo-list */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 10px;
+    margin-top: 8%;
+}
+
+.logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-height: 400px;
+    width: 350px;
+    margin-left: 8%;
+}
+
+.logo-list img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.screen-box {
+    flex: 1;
+}
+
+/* listitmes */
+.listitems {
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px;
+}
+
+.btm {
+    width: 70%;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    margin-left: 20%;
+    height: 200px;
+}
+
+.btm .listbtn:hover {
+    color: rgb(8, 121, 165);
+}
+
+.listbtn {
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px;
+    border: none;
+    background-color: #eee;
+}
+
+
+/* double-screen */
+
+.proscreen {
+    display: flex;
+    margin-top: 14%;
+    margin-left: -50%;
+}
+
+/* first screen */
+.prg-screen {
+    display: inline-block;
+    width: 50%;
+    height: 100vh;
+    background-color:white;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    padding: 8px;
+    margin-left: 0.5%;
+    overflow-y: auto;
+}
+
+/* Second screen */
+.show-prog {
+    display: inline-block;
+    width: 50%;
+    height: 100vh;
+    padding: 8px;
+    background-color:white;
+    border-radius: 10px;
+    left: 1%;
+    position: relative;
+    overflow-y: auto;
+}
+
+.codesnippet{
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 12px;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        /* stack items vertically */
+        align-items: center;
+        /* center content */
+    }
+
+    .logo-list {
+        width: 100%;
+        justify-content: center;
+
+        /* center icons */
+    }
+    .logo-list img{
+        width: 50px;
+    }
+
+    .screen-box {
+        width: 100%;
+    }
+    .btm{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .codesnippet{
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .proscreen {
+        display: block;   /* stack items */
+        margin: 0 auto;   /* center */
+    }
+
+    .prg-screen,
+    .show-prog {
+        display: block;
+        width: 90%;       /* take 90% width */
+        margin: 15px auto; /* center horizontally */
+        height: 100vh;     /* so it doesn’t overflow mobile screen */
+        font-size: 7px;
+    }
+}
+
+
+/* DELETE or comment these if you find them */
+@media (max-width: 768px) {
+    .menu-bar ul {
+        flex-direction: column;
+        gap: 1px;
+        font-size: 8px;
+    }
+
+    /* ❌ causes stacking */
+    .menu-bar ul li {
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    /* ❌ makes full-width rows */
+
+}
