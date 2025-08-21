@@ -19,8 +19,8 @@ function LivePreview({ code }) {
       width="100%"
       height="700px"
       style={{
-        background: "white",
-        borderRadius: "8px",
+      background: "white",
+      borderRadius: "8px",
 
 
       }}

@@ -4,10 +4,32 @@ import { programContent3 } from "../Data/js_data";
 import CodeSnippet from "../Codesnippet/CodeSnippet";
 import Rawcode from "../Codesnippet/Rawcode";
 
-function Screen1({ program, logs, clearLogs }) {
+
+function Screen1({ program }) {
   const code = programContent3[program] || "";
   return (
     <div className="prg-screen">
+      {program ? (
+        <CodeSnippet code={code} language="javascript" />
+      ) : (
+        <p
+          style={{
+            fontSize: "30px",
+            color: "rgb(54, 158, 219)",
+            fontWeight: "bold",
+          }}
+        >
+          Select an item above the list...
+        </p>
+      )}
+    </div>
+  );
+}
+
+function Screen2({ program, logs, clearLogs }) {
+  const code = programContent3[program] || "";
+  return (
+    <div className="show-prog">
       {program ? (
         <>
           <Rawcode code={code} />
@@ -51,26 +73,7 @@ function Screen1({ program, logs, clearLogs }) {
             Clear Console
           </button>
         </>
-      ) : (
-        <p
-          style={{
-            fontSize: "30px",
-            color: "rgb(54, 158, 219)",
-            fontWeight: "bold",
-          }}
-        >
-          Select an item above the list...
-        </p>
-      )}
-    </div>
-  );
-}
-
-function Screen2({ program }) {
-  const code = programContent3[program] || "";
-  return (
-    <div className="show-prog">
-      {program && <CodeSnippet code={code} language="javascript" />}
+      ) : null}
     </div>
   );
 }
@@ -99,10 +102,10 @@ export default function Screen3_js() {
 
       <div className="proscreen">
         {/* First screen: run the HTML+CSS+JS + show logs */}
-        <Screen1 program={program} logs={logs} clearLogs={clearLogs} />
+        <Screen1 program={program} />
 
         {/* Second screen: show raw snippet */}
-        <Screen2 program={program} />
+        <Screen2 program={program} logs={logs} clearLogs={clearLogs} />
       </div>
     </>
   );

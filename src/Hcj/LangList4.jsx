@@ -1,10 +1,10 @@
 import React from "react";
-import { items3 } from "../Data/js_data";
+import { items4} from "../Data/js1_data";
 
-export default function LangList3({ setProgram }) {
+export default function LangList4({ setProgram }) {
   return (
     <div className="listitems">
-      {items3.map((item, index) => (
+      {items4.map((item, index) => (
         <button 
           key={index}
           onClick={() => setProgram(item.program)} // single click = run program

@@ -1,10 +1,10 @@
 import React from "react";
-import { items3 } from "../Data/js_data";
+import { items5} from "../Data/hcjall_data.js";
 
-export default function LangList3({ setProgram }) {
+export default function LangList5({ setProgram }) {
   return (
     <div className="listitems">
-      {items3.map((item, index) => (
+      {items5.map((item, index) => (
         <button 
           key={index}
           onClick={() => setProgram(item.program)} // single click = run program

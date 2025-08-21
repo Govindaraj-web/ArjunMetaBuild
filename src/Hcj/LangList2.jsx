@@ -1,7 +1,7 @@
 import React from "react";
 import { items2 } from "../Data/css_data";
 
-export default function LangList({ setProgram }) {
+export default function LangList2({ setProgram }) {
   return (
     <div className="listitems">
       {items2.map((item, index) => (

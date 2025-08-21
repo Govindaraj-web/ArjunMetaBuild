@@ -4,14 +4,21 @@ import { programContent2 } from "../Data/css_data";
 import CodeSnippet from "../Codesnippet/CodeSnippet";
 import LivePreview from "../Codesnippet/LivePreview";
 
+
 function Screen1({ program }) {
   const code = programContent2[program] || "";
   return (
     <div className="prg-screen">
       {program ? (
-        <LivePreview code={code} />
+        <CodeSnippet code={code} language="javascript" />
       ) : (
-        <p style={{ fontSize: "30px", color: "rgb(54, 158, 219)", fontWeight: "bold" }}>
+        <p
+          style={{
+            fontSize: "30px",
+            color: "rgb(54, 158, 219)",
+            fontWeight: "bold",
+          }}
+        >
           Select an item above the list...
         </p>
       )}
@@ -23,10 +30,13 @@ function Screen2({ program }) {
   const code = programContent2[program] || "";
   return (
     <div className="show-prog">
-      {program && <CodeSnippet code={code} language="javascript" />}
+      {program ? (
+        <LivePreview code={code} />
+      ) : null}
     </div>
   );
 }
+
 
 export default function Screen2_css() {
   const [program, setProgram] = useState("");

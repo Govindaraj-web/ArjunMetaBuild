@@ -15,6 +15,7 @@ export const items2 = [
     { label: "Displaypro3", program: "Displaypro3" },
     { label: "Flex-Justify-C", program: "flexjustifyc" },
     { label: "Flexrow", program: "flexrow" },
+    { label: "cssposition", program: "cssposition" },
     { label: "Mainvscross", program: "mainvscross" },
     { label: "Flexwrapp", program: "flexwrapp" },
     { label: "Flexgrows", program: "flexgrows" },
@@ -22,8 +23,8 @@ export const items2 = [
     { label: "Flexsizee", program: "flexsizee" },
     { label: "Strezindex", program: "strezindex" },
     { label: "Postreab", program: "postreab" },
-    { label: "Mediascr", program: "mediascr" },
-    { label: "Bgchangei", program: "bgchangei" },
+    { label: "Mediascr", program: "mediascr" },  
+    { label: "Img_gallery", program: "imggallery" }  
 
 ];
 export const programContent2 = {
@@ -394,6 +395,8 @@ export const programContent2 = {
                 <h1 class="cflex">Two</h1>
                 <h1 class="cflex">Three</h1>
                 </div>`,
+    cssposition:`
+    <img src="./hcj/css_pos.png" style="width:500px" >`,
     mainvscross: `<style>
                     .div66{
                         display: flex;
@@ -701,60 +704,103 @@ export const programContent2 = {
                 </div>
                 
                 <h1 class="clrch">Printer color changed when you  ctrl+p and landscape print </h1>`,
-    bgchangei: `
-                <style>.card51 {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    margin: 30px;
-}
-.thumbnail-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+                imggallery:`<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,
+        wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,
+        900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
 
-    margin-top: 10px;
-}
-.thumbnail {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    border: 2px solid transparent;
-    border-radius: 2px;
-    cursor: pointer;
-}
-.thumbnail.selected {
-    border-color: blue;
-}</style>
-                <div class="card51">
-                    <h3>Background Change</h3>
-                    
-                    <div class="thumbnail-container">
-                        <img class="thumbnail selected" src="hcj/imb1.jpg" onclick="changeBackground(this, 'hcj/imb1.jpg')">
-                        <img class="thumbnail" src="hcj/imb2.jpg" onclick="changeBackground(this, 'hcj/imb2.jpg')">
-                        <img class="thumbnail" src="hcj/imb3.jpg" onclick="changeBackground(this, 'hcj/imb3.jpg')">
-                        <img class="thumbnail" src="hcj/imb4.jpg" onclick="changeBackground(this, 'hcj/imb4.jpg')">
-                        <img class="thumbnail" src="hcj/imb5.jpg" onclick="changeBackground(this, 'hcj/imb5.jpg')">
-                        <img class="thumbnail" src="hcj/imb6.jpg" onclick="changeBackground(this, 'hcj/imb6.jpg')">
-                        <img class="thumbnail" src="hcj/imb7.jpg" onclick="changeBackground(this, 'hcj/imb7.jpg')">
-                        <img class="thumbnail" src="hcj/imb8.jpg" onclick="changeBackground(this, 'hcj/imb8.jpg')">
-                        <img class="thumbnail" src="hcj/imb9.jpg" onclick="changeBackground(this, 'hcj/imb9.jpg')">
-                        <img class="thumbnail" src="hcj/imb10.jpg" onclick="changeBackground(this, 'hcj/imb10.jpg')">
-                        <img class="thumbnail" src="hcj/imb11.jpg" onclick="changeBackground(this, 'hcj/imb11.jpg')">
-                        
-                    </div>
-                </div>
-            
-                <script>
-                    function changeBackground(thumbnail, imagePath) {
-                        document.body.style.backgroundImage = \`url('$\{imagePath}')\`;
-                        document.querySelectorAll(".thumbnail").forEach(img => img.classList.remove("selected"));
-                        thumbnail.classList.add("selected");
-                    }
-                </script>`,
+<body>
+    <div>
+        <h1 class="titlebar">Image Gallery</h1>
+
+        <!--Flex container-->
+        <div class="container">
+            <div>
+                <img src="https://picsum.photos/200/200/?animal?1" alt="Random Image">
+
+                <h2>Lion</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+            <div>
+                <img src="https://picsum.photos/200/200?animals" alt="Grayscale Image">
+                <h2>cat</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+            <div>
+                <img src="https://picsum.photos/200/200/?animal?2" alt="Random Image">
+
+                <h2>Dear</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+            <div>
+                <img src="https://picsum.photos/200/200/?animal?3" alt="Random Image">
+                <h2>Giraffe</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+            <div>
+                <img src="https://picsum.photos/200/200?animals?2" alt="Grayscale Image">
+                <h2>Goat</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+            <div>
+                <img src="https://picsum.photos/200/200?animals?3" alt="Grayscale Image">
+                <h2>Dog</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+            <div>
+                <img src="https://picsum.photos/200/200/?animal?4" alt="Random Image">
+                <h2>Elephant</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+            <div>
+                <img src="https://picsum.photos/200/200?animals?4" alt="Grayscale Image">
+                <h2>Tiger</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <style>
+      
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: darkmagenta;
+           
+        }
+
+        .titlebar {
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+           
+        }
+
+        .container div {
+            width: 200px;
+            color: white;
+            margin: 10px;
+            flex-basis: 20%;
+        }
+    </style>
+</body>`
+    
 
 
 };

@@ -37,8 +37,8 @@ function Navbar() {
         </li>
 
         <li>
-          <a href="#">
-            <i className="fa fa-user"></i> SQL Lan
+          <a href="https://reactdcl.netlify.app/">
+            <i className="fa fa-user"></i> React
           </a>
         </li>
         <li>
