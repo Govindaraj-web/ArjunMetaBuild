@@ -1,104 +1,251 @@
-.hcj-container {
-    background-image: url('/imb10.jpg');
-    background-position: center;
-    background-size: cover;
-    /* scales image */
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    /* at least full viewport height */
-    width: 100%;
-    /* full width */
-    font-family: sans-serif;
-
-}
-
-/* Menu Bar */
-
-/* === FORCE SINGLE-ROW NAV ON ALL SIZES === */
-.menu-bar {
-    width: 100%;
-    background-color: rgb(66, 68, 69);
-    overflow-x: auto;
-    /* swipe left/right on small screens */
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    /* IE/Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-.menu-bar::-webkit-scrollbar {
-    display: none;
-}
-
-/* hide scrollbar (webkit) */
-
-.menu-bar ul {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    /* never wrap to next line */
-    justify-content: center;
+/* =======================
+   NAVBAR BASE
+   ======================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    background-color: #222;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* =======================
+   DESKTOP MENU
+   ======================= */
+.desktop-menu {
+    display: flex;
+    gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.menu-bar ul li {
-    flex: 0 0 auto !important;
-    /* don't stretch to full width */
-    margin: 0 8px;
-    padding: 13px 12px;
-    white-space: nowrap;
-    /* keep each item on one line */
-    /* make sure no old width=100% applies */
-    width: auto !important;
+.navbar-item {
+    position: relative;
+}
+
+.navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
     display: block;
-    /* li is a flex item; this is fine */
+    transition: background 0.3s;
 }
 
-.menu-bar ul li a {
+/* Active menu item */
+.navbar-item.active a {
+    background-color: #0077b6;
+    /* highlight home */
+}
+
+.navbar-item:hover a {
+    background-color: #005f86;
+}
+
+/* Desktop submenu */
+.desktop-submenu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 10px 0;
+    min-width: 120px;
+}
+
+.desktop-submenu li a {
+    padding: 8px 12px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.desktop-submenu li a:hover {
+    background-color: #444;
+}
+
+.navbar-item:hover .desktop-submenu {
+    display: block;
+}
+
+/* =======================
+   RIGHT BUTTONS
+   ======================= */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings-btn {
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settings-btn:hover {
+    background: #005f86;
+}
+
+/* SETTINGS POPUP */
+.settings-popup {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background: transparent;
+    padding: 15px;
+    z-index: 2000;
+}
+
+/* =======================
+   HAMBURGER BUTTON
+   ======================= */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =======================
+   MOBILE MENU
+   ======================= */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    padding: 60px 20px 20px 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1500;
+    overflow-y: auto;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Mobile menu list */
+.mobile-menu ul,
+.mobile-menu .mobile-submenu {
+    list-style: none;
+    /* remove bullets/circles */
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-item {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 8px 0;
+    color: #fff;
+}
+
+.mobile-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.arrow {
+    font-weight: bold;
+}
+
+.mobile-submenu {
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.mobile-submenu li {
+    margin-bottom: 10px;
+}
+
+.mobile-submenu li a {
     color: #fff;
     text-decoration: none;
     display: block;
 }
 
-.active,
-.menu-bar ul li:hover {
-    background-color: rgb(8, 121, 165);
+
+.card51 {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.card51 h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
     border-radius: 3px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    object-fit: cover;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-/* Keep dropdown working; won't affect row layout */
-.sub-menu-1 {
-    display: none;
+.thumbnail:hover {
+    transform: scale(1.1);
 }
 
-.menu-bar ul li:hover .sub-menu-1 {
-    display: block;
-    position: absolute;
-    background-color: rgb(66, 68, 69);
-    margin-left: -5px;
-    margin-top: 13px;
-    opacity: 0.95;
+.thumbnail.selected {
+    border-color: blue;
 }
 
-.menu-bar ul li:hover .sub-menu-1 ul {
-    display: block;
-    margin: 10px;
-}
+/* =======================
+   RESPONSIVE
+   ======================= */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
 
-.menu-bar ul li:hover .sub-menu-1 ul li {
-    width: 90px;
-    padding: 3px;
-    text-align: left;
-    border-bottom: 1px dotted #fff;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
-    color: white;
+    .hamburger-btn {
+        display: block;
+    }
 }
 
 
@@ -176,7 +323,7 @@
     display: inline-block;
     width: 50%;
     height: 100vh;
-    background-color:white;
+    background-color: white;
     border-radius: 10px;
     text-align: center;
     position: relative;
@@ -191,14 +338,14 @@
     width: 50%;
     height: 100vh;
     padding: 8px;
-    background-color:white;
+    background-color: white;
     border-radius: 10px;
     left: 1%;
     position: relative;
     overflow-y: auto;
 }
 
-.codesnippet{
+.codesnippet {
     border-radius: 8px;
     padding: 12px;
     font-size: 12px;
@@ -220,53 +367,42 @@
 
         /* center icons */
     }
-    .logo-list img{
+
+    .logo-list img {
         width: 50px;
     }
 
     .screen-box {
         width: 100%;
     }
-    .btm{
+
+    .btm {
         width: 90%;
         margin-left: 5%;
     }
-    .codesnippet{
+
+    .codesnippet {
         font-size: 8px;
     }
 }
 
 @media (max-width: 768px) {
     .proscreen {
-        display: block;   /* stack items */
-        margin: 0 auto;   /* center */
+        display: block;
+        /* stack items */
+        margin: 0 auto;
+        /* center */
     }
 
     .prg-screen,
     .show-prog {
         display: block;
-        width: 90%;       /* take 90% width */
-        margin: 15px auto; /* center horizontally */
-        height: 100vh;     /* so it doesn’t overflow mobile screen */
+        width: 90%;
+        /* take 90% width */
+        margin: 15px auto;
+        /* center horizontally */
+        height: 100vh;
+        /* so it doesn’t overflow mobile screen */
         font-size: 7px;
     }
-}
-
-
-/* DELETE or comment these if you find them */
-@media (max-width: 768px) {
-    .menu-bar ul {
-        flex-direction: column;
-        gap: 1px;
-        font-size: 8px;
-    }
-
-    /* ❌ causes stacking */
-    .menu-bar ul li {
-        width: 100%;
-        padding: 10px 10px;
-    }
-
-    /* ❌ makes full-width rows */
-
 }
