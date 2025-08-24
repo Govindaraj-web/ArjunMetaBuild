@@ -10,6 +10,16 @@ export const items4 = [
     { label: "HideNumber", program: "HideNumber" },
     { label: "Guess_number", program: "guessnumber" },
     { label: "Bgchangei", program: "bgchangei" },
+    { label: "bgcolorchange", program: "bgcolorchange" },
+    { label: "textcolorchange", program: "textcolorchange" },
+    { label: "showhidetext", program: "showhidetext" },
+    { label: "TodoList", program: "todo" },
+    { label: "Counter", program: "counterfun" },
+    { label: "Toggle", program: "togglebtn" },
+    { label: "slideimage", program: "slideimage" },
+    { label: "Navbar_simple", program: "navbar1" },
+    { label: "Student_resutl", program: "studentresutl" },
+
 
 
 
@@ -304,6 +314,457 @@ export const programContent4 = {
                         thumbnail.classList.add("selected");
                     }
                 </script>`,
+bgcolorchange: `
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Page</h1>
+    <button id="colorButton">Change Background Color</button>
+
+    <script>
+        document.getElementById('colorButton').addEventListener('click', function() {
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A8'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+});
+
+    </script>
+</body>
+</html>`,
+    textcolorchange: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Color</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+    <h1 id="text">Change my color!</h1>
+    <button id="colorButton">Change Color</button>
+    <script>
+        document.getElementById('colorButton').addEventListener('click', function() {
+    const colors = ['red', 'blue', 'green', 'purple', 'orange'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.getElementById('text').style.color = randomColor;
+});
+
+    </script>
+</body>
+</html>
+`,
+ showhidetext:`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Text</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Show/Hide Text</button>
+    <p id="text" style="display: none;">This is some text.</p>
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+    const text = document.getElementById('text');
+    if (text.style.display === 'none') {
+        text.style.display = 'block';
+    } else {
+        text.style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+</html>
+`, 
+todo:`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="New Task">
+    <button id="addButton">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        document.getElementById('addButton').addEventListener('click', function () {
+            const taskInput = document.getElementById('taskInput');
+            const taskList = document.getElementById('taskList');
+
+            if (taskInput.value !== '') {
+                const listItem = document.createElement('li');
+                listItem.textContent = taskInput.value;
+                taskList.appendChild(listItem); //The newly created list item (listItem) is appended to the taskList (the unordered list).
+                taskInput.value = ''; //clearing the input field for the next task entry
+            }
+        });
+
+    </script>
+</body>
+
+</html>`,
+counterfun:`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+
+        span {
+            font-size: 24px;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="decrement">-</button>
+    <span id="counter">0</span>
+    <button id="increment">+</button>
+    <script>
+        let count = 0;
+        const counterDisplay = document.getElementById('counter');
+
+        document.getElementById('increment').addEventListener('click', function () {
+            count++;
+            counterDisplay.textContent = count;
+        });
+
+        document.getElementById('decrement').addEventListener('click', function () {
+            count--;
+            counterDisplay.textContent = count;
+        });
+
+    </script>
+</body>
+
+</html>`,
+togglebtn:`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggleMode">Toggle Mode</button>
+    <script>
+        document.getElementById('toggleMode').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+
+    </script>
+</body>
+
+</html>`,
+slideimage:`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 800px;
+        }
+
+        .slider img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="slider-container">
+        <div class="slider">
+            <img id="slide-image" src="image1.jpg" alt="Slide Image">
+        </div>
+        <button class="prev" onclick="prevImage()">❮</button>
+        <button class="next" onclick="nextImage()">❯</button>
+    </div>
+
+    <script>
+        const images = [
+            './hcj/image1.jfif',
+            './hcj/image2.jfif',
+            './hcj/image3.jfif',
+            './hcj/image4.jfif',
+            './hcj/image5.jfif'
+        ];
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const imageElement = document.getElementById('slide-image');
+            imageElement.src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        }
+
+        // Initial call to display the first image
+        showImage(currentIndex);
+
+    </script>
+</body>
+
+</html>`,
+navbar1:`
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Product</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+<style>
+    nav{
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        width: 360px;
+        padding: 5px;
+        border-radius: 22px;
+        box-shadow: 2px 2px 22px rgba(0, 0, 0, 0.3);
+    }
+    nav>a{
+        text-decoration: none;
+        color: black;
+        padding: 8px 16px;
+    }
+    nav>a:hover{
+        background-color: skyblue;
+        border-radius: 22px;
+    }
+</style>
+
+`,
+studentresutl:`
+<html>
+
+<head>
+    <title>Student</title>
+</head>
+
+<body>
+    <center>
+        <h1>Student Result</h1>
+        <input type="number" id="marks" onkeyup="gradd()">
+        <input type="checkbox" id="yesorno" onchange="gradd()" style="display:none;">College Student
+        <p id="grades">Grade?</p>
+    </center>
+    <script>
+        function gradd() {
+            let student = document.getElementById("marks").value;
+            let grade = document.getElementById("grades");
+            let collegeCheckbox = document.getElementById("yesorno");
+
+            if(student >= 100) {
+                grade.textContent = "You entered a wrong mark";
+                collegeCheckbox.style.display = "none";
+            } else if (student >= 90) {
+                grade.textContent = "Grade: A";
+                collegeCheckbox.style.display = "none";
+            } else if (student >= 70) {
+                grade.textContent = "Grade: B";
+                collegeCheckbox.style.display = "none";
+            } else if (student >= 60) {
+                grade.textContent = "Grade: C";
+                collegeCheckbox.style.display = "none";
+            } else if (student >= 50) {
+                grade.textContent = "Grade: D";
+                collegeCheckbox.style.display = "none";
+            } else {
+                collegeCheckbox.style.display = "inline";
+                grade.textContent = "Fail";
+            }
+        }
+
+        document.getElementById("yesorno").addEventListener("change", function() {
+            if (this.checked) {
+                document.getElementById("grades").textContent = "RA";
+            } else {
+                gradd(); // Update grade based on the input value if checkbox is unchecked
+            }
+        });
+    </script>
+</body>
+
+</html>
+`
+
 
 
 
