@@ -5,7 +5,7 @@ import { items6, programFiles } from "../Data/react_data";
 
 // Import React components for live preview
 import UseState1 from "../Programs/UseState1.jsx";
-import UseState2 from "../Programs/UseState2.jsx";
+import UseState22 from "../Programs/UseState22.jsx";
 import UseState33 from "../Programs/UseState33.jsx";
 import UseState44 from "../Programs/UseState44.jsx";
 import UseState5 from "../Programs/UseState5.jsx";
@@ -17,7 +17,7 @@ import UsememoUsecallback1 from "../Programs/UsememoUsecallback1.jsx";
 // Map React components for live preview
 const programComponents = {
   UseState1: <UseState1 />,
-  UseState2: <UseState2 />,
+  UseState22: <UseState22 />,
   UseState33: <UseState33 />,
   UseState44: <UseState44 />,
   UseState5: <UseState5 />,
@@ -28,8 +28,8 @@ const programComponents = {
 };
 
 // Let Vite know all files for raw loading
-const jsxFiles = import.meta.glob("../Programs/*.jsx", { as: "raw" });
-const cssFiles = import.meta.glob("../Programs/*.css", { as: "raw" });
+const jsxFiles = import.meta.glob("../Programs/*.jsx?raw");
+const cssFiles = import.meta.glob("../Programs/*.css?raw");
 
 function Screen1({ program }) {
   const [jsxCode, setJsxCode] = useState("");

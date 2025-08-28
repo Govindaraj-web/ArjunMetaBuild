@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./UseState2.css";
+import "./UseState22.css";
 
-function UseState2() {
-    const [isVisible, setIsVisible] = useState(true);
+function UseState22() {
+  const [isVisible, setIsVisible] = useState(true);
   return (
 
     <div className="contai">
@@ -15,5 +15,4 @@ function UseState2() {
     
   )
 }
-
-export default UseState2
+export default UseState22
