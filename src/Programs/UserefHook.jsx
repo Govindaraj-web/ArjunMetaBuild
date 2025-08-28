@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-function UserefHook() {
+function UseRefHook() {
   const aboutRef = useRef(null); // 📦 reference for "About" section
   const contactRef = useRef(null); // 📦 reference for "Contact" section
 
@@ -43,7 +43,7 @@ function UserefHook() {
   );
 }
 
-export default UserefHook;
+export default UseRefHook;
 
 
 

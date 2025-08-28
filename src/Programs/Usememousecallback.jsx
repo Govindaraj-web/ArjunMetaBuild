@@ -1,6 +1,6 @@
 import React,{useMemo,useCallback,useState} from 'react'
 
-function Usememousecallback() {
+function UsememoUsecallback() {
     const [count, setCount] = useState(0);
     const [dark,setDark] = useState(false)
 
@@ -35,7 +35,7 @@ function Usememousecallback() {
   )
 }
 
-export default Usememousecallback
+export default UsememoUsecallback
 
 
 
