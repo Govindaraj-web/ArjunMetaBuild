@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Usestate2.css";
+import "./UseState2.css";
 
 function UseState2() {
     const [isVisible, setIsVisible] = useState(true);

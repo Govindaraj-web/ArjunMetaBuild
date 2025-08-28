@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Usestate3.css";
+import "./UseState3.css";
 
 function UseState3() {
   const [text, setText] = useState("");
