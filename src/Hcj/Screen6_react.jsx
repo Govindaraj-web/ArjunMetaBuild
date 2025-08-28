@@ -27,9 +27,11 @@ const programComponents = {
   UsememoUsecallback1: <UsememoUsecallback1 />,
 };
 
+
 // Let Vite know all files for raw loading
-const jsxFiles = import.meta.glob("../Programs/*.jsx?raw");
-const cssFiles = import.meta.glob("../Programs/*.css?raw");
+const jsxFiles = import.meta.glob("../Programs/*.jsx", { query: "?raw", import: "default" });
+const cssFiles = import.meta.glob("../Programs/*.css", { query: "?raw", import: "default" });
+
 
 function Screen1({ program }) {
   const [jsxCode, setJsxCode] = useState("");
