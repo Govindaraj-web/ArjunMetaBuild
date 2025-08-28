@@ -4,11 +4,11 @@ import CodeSnippet from "../Codesnippet/Reactcode";
 import { items6, programFiles } from "../Data/react_data";
 
 // Import React components for live preview
-import Usestate1 from "../Programs/UseState1.jsx";
-import Usestate2 from "../Programs/UseState2.jsx";
-import Usestate3 from "../Programs/UseState3.jsx";
-import Usestate4 from "../Programs/UseState4.jsx";
-import Usestate5 from "../Programs/UseState5.jsx";
+import UseState1 from "../Programs/UseState1.jsx";
+import UseState2 from "../Programs/UseState2.jsx";
+import UseState3 from "../Programs/UseState3.jsx";
+import UseState4 from "../Programs/UseState4.jsx";
+import UseState5 from "../Programs/UseState5.jsx";
 import UseEffect1 from "../Programs/UseEffect1.jsx";
 import UseEffect2 from "../Programs/UseEffect2.jsx";
 import UseRefHook from "../Programs/UseRefHook.jsx";
@@ -16,11 +16,11 @@ import UsememoUsecallback from "../Programs/UsememoUsecallback.jsx";
 
 // Map React components for live preview
 const programComponents = {
-  UseState1: <Usestate1 />,
-  UseState2: <Usestate2 />,
-  UseState3: <Usestate3 />,
-  UseState4: <Usestate4 />,
-  UseState5: <Usestate5 />,
+  UseState1: <UseState1 />,
+  UseState2: <UseState2 />,
+  UseState3: <UseState3 />,
+  UseState4: <UseState4 />,
+  UseState5: <UseState5 />,
   UseEffect1: <UseEffect1 />,
   UseEffect2: <UseEffect2 />,
   UseRefHook: <UseRefHook />,
