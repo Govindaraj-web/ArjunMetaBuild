@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./UseState4.css";
 
-function UseState4() {
-  const [isOn, setIsOn] = useState(false);
+function UseState44() {
+ const [isOn, setIsOn] = useState(false);
 
   return (
 
@@ -15,4 +15,5 @@ function UseState4() {
   )
 }
 
-export default UseState4
+
+export default UseState44
