@@ -14,7 +14,7 @@ function App() {
       <Navbar setBackground={setBackground} />
       <HcjApp />
     </div>
-  );
+  ); 
 }
 
 export default App;
