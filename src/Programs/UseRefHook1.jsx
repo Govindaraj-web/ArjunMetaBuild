@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
-function UseRefHook() {
-  const aboutRef = useRef(null); // 📦 reference for "About" section
+function UseRefHook1() {
+ const aboutRef = useRef(null); // 📦 reference for "About" section
   const contactRef = useRef(null); // 📦 reference for "Contact" section
 
   const scrollToAbout = () => {
@@ -43,7 +43,9 @@ function UseRefHook() {
   );
 }
 
-export default UseRefHook;
+export default UseRefHook1
+
+
 
 
 

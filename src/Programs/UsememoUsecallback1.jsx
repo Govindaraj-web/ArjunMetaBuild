@@ -1,6 +1,6 @@
 import React,{useMemo,useCallback,useState} from 'react'
 
-function UsememoUsecallback() {
+function UsememoUsecallback1() {
     const [count, setCount] = useState(0);
     const [dark,setDark] = useState(false)
 
@@ -34,8 +34,8 @@ function UsememoUsecallback() {
     </div>
   )
 }
+export default UsememoUsecallback1
 
-export default UsememoUsecallback
 
 
 

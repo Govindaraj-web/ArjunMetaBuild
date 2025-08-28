@@ -11,8 +11,8 @@ import UseState44 from "../Programs/UseState44.jsx";
 import UseState5 from "../Programs/UseState5.jsx";
 import UseEffect1 from "../Programs/UseEffect1.jsx";
 import UseEffect2 from "../Programs/UseEffect2.jsx";
-import UseRefHook from "../Programs/UseRefHook.jsx";
-import UsememoUsecallback from "../Programs/UsememoUsecallback.jsx"; 
+import UseRefHook1 from "../Programs/UseRefHook1.jsx";
+import UsememoUsecallback1 from "../Programs/UsememoUsecallback1.jsx"; 
 
 // Map React components for live preview
 const programComponents = {
@@ -23,8 +23,8 @@ const programComponents = {
   UseState5: <UseState5 />,
   UseEffect1: <UseEffect1 />,
   UseEffect2: <UseEffect2 />,
-  UseRefHook: <UseRefHook />,
-  UsememoUsecallback: <UsememoUsecallback />,
+  UseRefHook1: <UseRefHook1 />,
+  UsememoUsecallback1: <UsememoUsecallback1 />,
 };
 
 // Let Vite know all files for raw loading

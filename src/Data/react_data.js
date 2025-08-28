@@ -7,8 +7,8 @@ export const items6 = [
   { label: "UseState5", program: "UseState5" },
   { label: "UseEffect1", program: "UseEffect1" },
   { label: "UseEffect2", program: "UseEffect2" },
-  { label: "UseRef_Hook", program: "UseRefHook" },
-  { label: "Usememo_Usecallback", program: "UsememoUsecallback" },
+  { label: "UseRef_Hook", program: "UseRefHook1" },
+  { label: "Usememo_Usecallback", program: "UsememoUsecallback1" },
 ];
 
 // Map program names to file names (JSX + CSS)
@@ -20,6 +20,6 @@ export const programFiles = {
   UseState5: { jsx: "UseState5.jsx" },
   UseEffect1: { jsx: "UseEffect1.jsx" },
   UseEffect2: { jsx: "UseEffect2.jsx" },
-  UseRefHook: { jsx: "UseRefHook.jsx" },              // ✅ fixed
-  UsememoUsecallback: { jsx: "UsememoUsecallback.jsx" }, // ✅ fixed
+  UseRefHook1: { jsx: "UseRefHook1.jsx" },              // ✅ fixed
+  UsememoUsecallback1: { jsx: "UsememoUsecallback1.jsx" }, // ✅ fixed
 };
