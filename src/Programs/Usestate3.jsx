@@ -1,0 +1,24 @@
+import { useState } from "react";
+import "./Usestate3.css";
+
+function Usestate3() {
+  const [text, setText] = useState("");
+
+  return (
+
+      <div className="contai">
+        <input
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          className="input-box"
+          placeholder="Type something..."
+        />
+        <p className="text-display">You typed: {text}</p>
+      </div>
+   
+  
+  )
+}
+
+export default Usestate3

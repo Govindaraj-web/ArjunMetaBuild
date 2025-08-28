@@ -4,6 +4,7 @@ import Screen2 from "../Hcj/Screen2_css";
 import Screen3 from "../Hcj/Screen3_js"
 import Screen4 from "../Hcj/Screen4_js"
 import Screen5 from "../Hcj/Screen5_all";
+import Screen6 from "../Hcj/Screen6_react";
 
 
 function HcjApp() {
@@ -28,6 +29,7 @@ function HcjApp() {
         {activeScreen === 3 && <Screen3 />}
         {activeScreen === 4 && <Screen4 />}
         {activeScreen === 5 && <Screen5 />}
+        {activeScreen === 6 && <Screen6 />}
       </div>
     </div>
   );

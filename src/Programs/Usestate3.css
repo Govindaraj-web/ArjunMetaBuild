@@ -1,0 +1,17 @@
+.contai {
+    text-align: center;
+    padding: 20px;
+  }
+  
+.text-display {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .input-box {
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 5px;
+  }

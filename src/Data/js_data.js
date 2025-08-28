@@ -53,6 +53,26 @@ export const items3 = [
     { label: "Classes5", program: "Classes5" },
     { label: "Classes6", program: "Classes6" },
     { label: "Classes7", program: "Classes7" },
+    { label: "Que1", program: "Que1" },
+    { label: "Que2", program: "Que2" },
+    { label: "Que3", program: "Que3" },
+    { label: "Que4", program: "Que4" },
+    { label: "Que5", program: "Que5" },
+    { label: "Que6", program: "Que6" },
+    { label: "Que7", program: "Que7" },
+    { label: "Que8", program: "Que8" },
+    { label: "Que9", program: "Que9" },
+    { label: "Que10", program: "Que10" },
+    { label: "Que11", program: "Que11" },
+    { label: "Que12", program: "Que12" },
+    { label: "Que13", program: "Que13" },
+    { label: "Que14", program: "Que14" },
+    { label: "Que15", program: "Que15" },
+    { label: "Que16", program: "Que16" },
+    { label: "Que17", program: "Que17" },
+    { label: "Que18", program: "Que18" },
+    { label: "Que19", program: "Que19" },
+    { label: "Que20", program: "Que20" },
    
     
    
@@ -1279,8 +1299,184 @@ myPizza.bake()
 // console.log(myPizza.#sauce) // You can't access the key and value because that is private property
  
 `,
+Que1:`
+console.log("arjun"<70) //Ans: false
+console.log("arjun">70) //Ans: false
+console.log("70">80) //Ans: false
+console.log(80>70) //Ans: true
+`,
+Que2:`[y] = [1,2,3,4,5]
+console.log(y)  //Ans: 1`,
+Que3:`let a= 100
+const b =  a++ + ++a // 101 + 101 = 202
+console.log(b) //Ans: 202`,
+Que4:`function abc(){
+    console.log(abc.xyz)
+}
+abc()
+abc.xyz=400
+abc.xyz=200
+abc()
+`,
+Que5:`const numbers=[1,2,3,4]
+numbers[50]=500
+console.log(numbers) 
+//Ans: [ 1, 2, 3, 4, <46 empty items>, 500 ]`,
+Que6:`console.log(typeof typeof 100) 
+//typeof 100 → "number" (a string)
+// typeof "number" → "string"
+// ✅ So the output is: "string"`,
+Que7:`const arr = [..."arjun"]
+console.log(arr) //Ans: [ 'a', 'r', 'j', 'u', 'n' ]`,
+Que8:`console.log(parseInt("10+2")) 
+console.log(parseInt("7F7"))
+console.log(parseInt("M7F")) `,
+Que9:`console.log(isNaN("arjun")) //Ans: true
+console.log(isNaN("7")) //Ans: false
+`,
+Que10:`
+// console.log([1,2].map(num=>{
+//     if(num>0) return;
+//     return num * 2
+// }))
+// if (1 > 0) return; // true → so it just returns undefined
+// if (2 > 0) return; // true → again returns undefined
+// Ans: [undefined, undefined]
 
-    
+
+console.log([1,2,0,-1].map(num=>{
+    if(num>0) return;
+    return num*2
+})) 
+// if (0 > 0) return; // false => return 0 * 2;   // → returns 0
+// if (-1 > 0) return; // false => return -1 * 2;    // → returns -2
+//Ans: [undefined, undefined, 0, -2]
+`,
+Que11:`"use strict" 
+// When will use the use strict on js orginial Ans: not defined & error 
+{
+function abc(){
+    console.log('arjun')
+}
+}
+abc()`,
+Que12: `
+// Ascending
+let arr = [32,1,8,7,5,2]
+arr.sort((a,b) => a-b)
+console.log(arr) 
+// Ans: [1, 2, 5, 7, 8, 32] with FED
+
+// Descending?
+// let arr = [32,1,8,7,5,2]
+// arr.sort((a,b) => b-a)
+// console.log(arr) 
+// Ans: [32, 8, 7, 5, 2, 1] with FED`,
+Que13:`
+const arr= [1,2,3,4,5,6,7,8]
+const newArr = arr.find(num => num>4)
+console.log(newArr) //Ans: 5
+
+// const arr= [1,2,3,4,5,6,7,8]
+// const newArr = arr.filter(num => num>4)
+// console.log(newArr) //Ans: [5,6,7,8]
+
+// const arr= [1,2,3,4,5,6,7,8]
+// const newArr = arr.map(num => num>4)
+// console.log(newArr) //Ans: [
+//   false, false,
+//   false, false,
+//   true,  true,
+//   true,  true
+// ]
+  `,
+Que14:`
+const numbers = [1,2,3,4,5]
+const abc = numbers.map(item => item =2)
+console.log(abc)
+ //Ans: [
+//   4, 4, 4, 4,
+//   4, 4, 4, 4
+// ]
+
+// const numbers = [1,2,3,4,5]
+// const abc = numbers.filter(item => item =2)
+// console.log(abc) //Ans: [
+//   1, 2, 3, 4,
+//   5, 6, 7, 8
+// ]
+
+// const numbers = [1,2,3,4,5]
+// const abc = numbers.reduce(item => item =2)
+// console.log(abc)  //Ans: 4
+`,
+Que15:`
+var a =10
+console.log(a++) //prints 10 first, then increases a to 11.
+console.log(a) //Ans: 10 , 11
+
+var b = 10;
+console.log(++b); // 11 (increment first, then print)
+console.log(b);  // Ans: 11, 11
+`,
+Que16:`
+function addd(){
+    console.log("added")
+    return 100+100
+}
+
+function subb(){
+    console.log('subtr')
+    return 200-200
+}
+
+let a = (addd(),subb()) 
+//You are using the comma operator: (expression1, expression2)
+console.log(a)   
+// Ans: added, subtr, undefined
+
+// Explain1: (How the comma operator works:
+// It evaluates both expressions from left to right.
+// But it only returns the result of the last expression.)
+
+// Explain2: (What happens line by line?
+// addd() runs → prints "added" → returns 200, but this value is ignored.
+// subb() runs → prints "subtr" → returns 0, and this is assigned to a.
+// console.log(a) → prints 0. )
+`,
+Que17:`
+function check() {
+  console.log("Before return");
+  return "done";
+  console.log("After return"); 
+  // ❌ This will never run
+}
+check();
+// Ans: Before return
+`,
+Que18:`
+ console.log(+"555")
+     console.log(+555)
+       // Ans: 555, 555 (brief ex to FED)
+`,
+Que19:`let numbers =2
+        let a = !--numbers
+        let b = !--numbers
+        console.log(a,b)  
+//Ans: false, true
+`,
+Que20:`
+a = 10
+     console.log(a)  // Ans: 10  
+ //  If you don’t declare a variable and just assign it like this
+// It becomes a global variable (if not in strict mode).
+// If you're using strict mode, 
+// this will throw an error: 'use strict';  a = 10; 
+// // ❌ ReferenceError: a is not defined
+`,
+
+
+
 };
 
 
