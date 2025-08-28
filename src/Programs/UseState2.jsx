@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Usestate2.css";
 
-function Usestate2() {
+function UseState2() {
     const [isVisible, setIsVisible] = useState(true);
   return (
 
@@ -16,4 +16,4 @@ function Usestate2() {
   )
 }
 
-export default Usestate2
+export default UseState2

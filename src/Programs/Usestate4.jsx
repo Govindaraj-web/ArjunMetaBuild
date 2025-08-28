@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Usestate4.css";
 
-function Usestate4() {
+function UseState4() {
   const [isOn, setIsOn] = useState(false);
 
   return (
@@ -15,4 +15,4 @@ function Usestate4() {
   )
 }
 
-export default Usestate4
+export default UseState4

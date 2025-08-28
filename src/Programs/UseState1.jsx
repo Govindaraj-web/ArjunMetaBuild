@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./UseState1.css";
 
-function Usestate1() {
+function UseState1() {
     const [count, setCount] = useState(0);
 
   return (
@@ -16,4 +16,4 @@ function Usestate1() {
   )
 }
 
-export default Usestate1
+export default UseState1

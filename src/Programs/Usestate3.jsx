@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Usestate3.css";
 
-function Usestate3() {
+function UseState3() {
   const [text, setText] = useState("");
 
   return (
@@ -21,4 +21,4 @@ function Usestate3() {
   )
 }
 
-export default Usestate3
+export default UseState3
